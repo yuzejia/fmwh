@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+.product{ width:1202px; overflow:hidden; margin:0 auto;font-family:"Microsoft YaHei"; margin-top:30px;}
+.product .nav{ width:145px; height:350px; float:left; }
+.product .nav h4{ width:145px; height:55px; background:#F00; text-align:center;font-weight:normal;}
+.product .nav h4 a{ display:block; width:145px; font-size:18px; text-align:center;}
+.product .nav h4 a{ color:#FFF;}
+.product .nav ul{ width:145px; overflow:hidden; background:#e7e2e2; font-size:12px; text-align:center; padding-top:20px; padding-bottom:30px;}
+.product .nav ul li{ width:100px; height:40px; margin:0 auto; line-height:40px;margin-top:15px; border:2px #FF0000 solid; background:#F00;}
+.product .nav ul li a{color:#FFF; display:block; width:100px; height:40px;}
+.product .nav ul li:hover{ background:#e7e2e2; border:2px #FF0000 solid;}
+.product .nav ul li:hover a{ color:#F00;}
+.product .nav ul .current{ background:#e7e2e2; border:2px #FF0000 solid;}
+.product .nav ul .current a{ color:#F00;}
+.product .top{ width:1057px; height:56px; float:right; border-bottom:1px #FF0000 solid;}
+.product .top p{float:right;}
+.product .top p .current{ color:#F00;}
+.product .top p a:hover{ color:#F00;}

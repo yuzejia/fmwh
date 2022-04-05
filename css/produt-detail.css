@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+
+.product .top p{ width:200px; height:20px; font-size:12px; padding-top:35px; float:right;}
+
+.product .center{ width:1052px; overflow:hidden;}
+.product .center h2{text-align:center; line-height:105px;font-weight:normal;}
+.product .center img{ float:left; margin-left:10px;}
+.product .center .main-right{ width:400px; height:405px; font-size:18px; float:right; margin-left:15px;}
+.product .center .main-right p{ text-indent:2em; margin-top:25px; line-height:30px;font-size:18px;}
+.product .txt{ width:1052px; overflow:hidden; float:right;}
+.product .txt { width:1030px; overflow:hidden;font-size:18px; padding:25px; line-height:30px;}
+.product .txt h5{ font-size:18px; margin-top:30px;font-weight:normal;}
+.product .txt p{ text-indent:2em;}
+.foot{ margin-top:150px;}
+

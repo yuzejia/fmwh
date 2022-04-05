@@ -1,0 +1,390 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>首页</title>
+    <link type="text/css" rel="stylesheet" href="css/index.css" />
+    <link href="css/css.css" rel="stylesheet" type="text/css">
+    <link href="css/banner.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <div class="top">
+        <a href="index.html"><img src="images/logo.png" width="293" height="146" /></a>
+        <ul class="nav">
+            <li><a class="current" href="index.html">首页</a></li>
+            <li><a href="about_us.html">公司介绍</a></li>
+            <li><a href="news.html">新闻中心</a></li>
+            <li><a href="product.html">产品中心</a></li>
+            <li><a href="contact_us.html">联系我们</a></li>
+        </ul>
+    </div>
+
+
+    <div class="banner-box">
+        <div class="bd">
+            <ul>
+                <li style="">
+                    <div class="m-width">
+                        <a href="javascript:void(0);"><img src="images/index-banner_01.jpg" width="100%"
+                                height="430" /></a>
+                    </div>
+                </li>
+                <li style="">
+                    <div class="m-width">
+                        <a href="javascript:void(0);"><img src="images/index-banner_02.jpg" width="100%"
+                                height="430" /></a>
+                    </div>
+                </li>
+                <li style="">
+                    <div class="m-width">
+                        <a href="javascript:void(0);"><img src="images/index-banner_03.jpg" width="100%"
+                                height="430" /></a>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="banner-btn">
+            <a class="prev" href="javascript:void(0);"></a>
+            <a class="next" href="javascript:void(0);"></a>
+            <div class="hd">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(".prev,.next").hover(function () {
+                $(this).stop(true, false).fadeTo("show", 0.9);
+            }, function () {
+                $(this).stop(true, false).fadeTo("show", 0.4);
+            });
+
+            $(".banner-box").slide({
+                titCell: ".hd ul",
+                mainCell: ".bd ul",
+                effect: "fold",
+                interTime: 3500,
+                delayTime: 500,
+                autoPlay: true,
+                autoPage: true,
+                trigger: "click"
+            });
+
+        });
+    </script>
+
+
+    </div>
+    <div class="about_us">
+        <div class="about">
+
+            <h4 class="title"><a href="about_us.html">关于我们</a></h4>
+            <div class="top">
+                <div class="left">
+                    <p>平顶山风鸣文化传媒有限公司成立于2022年3月，集设计、开发、摄影、服务于一体，致
+                        力于文化传播与媒体运营，是一家实力雄厚、精英荟
+                        萃的文化传媒公司。
+                    </p>
+                    <p>公司自成立，基于发展家乡的考虑，吸引更多技术型人才回到家乡发展，公司将
+                        以提高家乡文化底蕴，使家乡职位更加的多元化，我们将坚持
+                        正直、诚信、永不言败的企业精神，我们将以家乡文化、艺术、心理、精
+                        神等多方面展开工作，为家乡的发展贡献一份自己的力量。
+                    </p>
+                </div>
+                <div class="right">
+
+                    <a href="about_us.html"> <img src="images/index-main7.png" width="507" height="505" /></a>
+                    <div class="right1"></div>
+
+                </div>
+            </div>
+
+            <p class="p1">品质第一、顾客至上，精益求精、共赢共进。</p>
+        </div>
+    </div>
+    <div class="news">
+        <h4 class="title"><a href="news.html">新闻中心</a></h4>
+        <div class="left">
+            <div>
+                <h5>01.</h5>
+                <h3>NEWS</h3>
+                <p>平顶山风鸣文化传媒有限公司于2022年3月23日正式成立</p>
+            </div>
+
+        </div>
+        <div class="right">
+            <a href="news.html"><img src="images/index-main2.png" width="384" height="477" /></a>
+            <div class="nav">
+                <h3><a class="current" href="news.html">公司新闻</a>
+                    <a href="news.html">行业新闻</a>
+                </h3>
+                <ul>
+                    <li>
+                        <a href="news_details.html">
+                            平面设计团队案例
+                            <span> <img src="images/index-main6.png" width="18" height="13" />
+                                2016.02.22</span></a>
+                    </li>
+                    <li>
+                        <a href="news_details.html">
+                            UI设计团队案例
+                            <span> <img src="images/index-main6.png" width="18" height="13" />
+                                2016.07.28</span></a>
+                    </li>
+                    <li>
+                        <a href="news_details.html">
+                            网站开发团队案例
+                            <span><img src="images/index-main6.png" width="18" height="13" />
+                                2016.09.11</span></a>
+                    </li>
+                    <li>
+                        <a href="news_details.html">
+                            抖音视频剪辑团队案例
+                            <span> <img src="images/index-main6.png" width="18" height="13" />
+                                2016.10.08</span></a>
+                    </li>
+                    <li>
+                        <a href="news_details.html">
+                            平面设计团队案例
+                            <span><img src="images/index-main6.png" width="18" height="13" />
+                                2016.10.26</span></a>
+                    </li>
+                    <li>
+                        <a href="news_details.html">
+                            UI设计团队案例
+                            <span> <img src="images/index-main6.png" width="18" height="13" />
+                                2016.11.24</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <h4 class="title"><a href="product.html">产品中心</a></h4>
+        <ul>
+            <li>
+                <a href="pro_details.html"><img src="images/index-main3.png" width="365" height="233" /></a>
+                <h3><a href="pro_details.html">设计理念</a></h3>
+                <p><a href="pro_details.html">线条柔美雅致，遒劲而富于节奏感整体形式有条不紊，富有节奏。</a></p>
+            </li>
+            <li>
+                <a href="pro_details.html"><img src="images/index-main4.png" width="365" height="233" /></a>
+                <h3><a href="pro_details.html">设计理念</a></h3>
+                <p><a href="pro_details.html">将玻璃、瓷砖、铁艺制品、陶艺制品等元素很好的综合运用于室内。</a></p>
+            </li>
+            <li>
+                <a href="pro_details.html"><img src="images/index-main5.png" width="365" height="233" /></a>
+                <h3><a href="pro_details.html">设计理念</a></h3>
+                <p><a href="pro_details.html">注意室内外沟通，竭力给室内装饰艺术引入新意。</a></p>
+            </li>
+
+        </ul>
+        <h5><a href="product.html">了解更多</a></h5>
+    </div>
+    <div class="contact_us">
+        <div class="contact">
+            <h4 class="title"><a href="contact_us.html">联系我们</a> </h4>
+            <div class="left">
+                <form>
+
+                    <input class="box1" type="text" value="姓名：" onfocus="if(this.value == '姓名：') this.value = ''"
+                        onblur="if(this.value =='') this.value = '姓名：'" />
+                    <input class="box2" type="text" value="邮箱：" onfocus="if(this.value == '邮箱：') this.value = ''"
+                        onblur="if(this.value =='') this.value = '邮箱：'" />
+                    <textarea class="box3" onfocus="if(this.value == '我的留言：') this.value = ''"
+                        onblur="if(this.value =='') this.value = '我的留言：'">我的留言：</textarea>
+                    <p>
+                        <input style="cursor:pointer;" type="submit" value="提交" />
+                        <input style="cursor:pointer;" type="reset" value="重置" />
+                    </p>
+                </form>
+            </div>
+
+
+
+            <div class="map">
+                <!DOCTYPE html
+                    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+                <html xmlns="http://www.w3.org/1999/xhtml">
+
+                <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+                    <meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+                    <meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+                    <title>百度地图API自定义地图</title>
+                    <!--引用百度地图API-->
+                    <link type="text/css" rel="stylesheet" href="css/map.css" />
+                    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+                </head>
+
+                <body>
+                    <!--百度地图容器-->
+                    <div style="width:460px;height:390px;border:#ccc solid 1px;" id="dituContent"></div>
+                </body>
+                <script type="text/javascript">
+                    //创建和初始化地图函数：
+                    function initMap() {
+                        createMap();//创建地图
+                        setMapEvent();//设置地图事件
+                        addMapControl();//向地图添加控件
+                        addMarker();//向地图中添加marker
+                    }
+
+                    //创建地图函数：
+                    function createMap() {
+                        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+                        var point = new BMap.Point(113.353442, 22.971738);//定义一个中心点坐标
+                        map.centerAndZoom(point, 16);//设定地图的中心点和坐标并将地图显示在地图容器中
+                        window.map = map;//将map变量存储在全局
+                    }
+
+                    //地图事件设置函数：
+                    function setMapEvent() {
+                        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+                        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+                        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+                        map.enableKeyboard();//启用键盘上下左右键移动地图
+                    }
+
+                    //地图控件添加函数：
+                    function addMapControl() {
+                        //向地图中添加缩放控件
+                        var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+                        map.addControl(ctrl_nav);
+                        //向地图中添加缩略图控件
+                        var ctrl_ove = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1 });
+                        map.addControl(ctrl_ove);
+                        //向地图中添加比例尺控件
+                        var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+                        map.addControl(ctrl_sca);
+                    }
+
+                    //标注点数组
+                    var markerArr = [{ title: "我在这里", content: "汇峰装饰设计有限公司", point: "113.34905|22.974358", isOpen: 1, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
+                    ];
+                    //创建marker
+                    function addMarker() {
+                        for (var i = 0; i < markerArr.length; i++) {
+                            var json = markerArr[i];
+                            var p0 = json.point.split("|")[0];
+                            var p1 = json.point.split("|")[1];
+                            var point = new BMap.Point(p0, p1);
+                            var iconImg = createIcon(json.icon);
+                            var marker = new BMap.Marker(point, { icon: iconImg });
+                            var iw = createInfoWindow(i);
+                            var label = new BMap.Label(json.title, { "offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20) });
+                            marker.setLabel(label);
+                            map.addOverlay(marker);
+                            label.setStyle({
+                                borderColor: "#808080",
+                                color: "#333",
+                                cursor: "pointer"
+                            });
+
+                            (function () {
+                                var index = i;
+                                var _iw = createInfoWindow(i);
+                                var _marker = marker;
+                                _marker.addEventListener("click", function () {
+                                    this.openInfoWindow(_iw);
+                                });
+                                _iw.addEventListener("open", function () {
+                                    _marker.getLabel().hide();
+                                })
+                                _iw.addEventListener("close", function () {
+                                    _marker.getLabel().show();
+                                })
+                                label.addEventListener("click", function () {
+                                    _marker.openInfoWindow(_iw);
+                                })
+                                if (!!json.isOpen) {
+                                    label.hide();
+                                    _marker.openInfoWindow(_iw);
+                                }
+                            })()
+                        }
+                    }
+                    //创建InfoWindow
+                    function createInfoWindow(i) {
+                        var json = markerArr[i];
+                        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>" + json.content + "</div>");
+                        return iw;
+                    }
+                    //创建一个Icon
+                    function createIcon(json) {
+                        var icon = new BMap.Icon("images/map.png", new BMap.Size(json.w, json.h), { imageOffset: new BMap.Size(-json.l, -json.t), infoWindowOffset: new BMap.Size(json.lb + 5, 1), offset: new BMap.Size(json.x, json.h) })
+                        return icon;
+                    }
+
+                    initMap();//创建和初始化地图
+                </script>
+
+                </html>
+
+            </div>
+
+            <ul class="right">
+                <li><img src="images/main1.png" width="18" height="30" /><span>郏县龙山大道新星苑7号楼</span></li>
+                <li><img src="images/main2.png" width="27" height="27" /><span>17839938392</span></li>
+                <li><img src="images/main3.png" width="27" height="30" /><span>王先生</span></li>
+                <li><img src="images/main4.png" width="18" height="31" /><span>1193042176</span></li>
+                <li><img src="images/main5.png" width="32" height="32" /><span>1193042176@qq.com</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="main">
+            <div class="left">
+                <dl>
+                    <dt><a href="about_us.html">关于我们</a></dt>
+                    <dd><a href="#">品牌故事</a></dd>
+                    <dd><a href="#">服务理念</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="product.html">产品中心</a></dt>
+                    <dd><a href="#">平面设计</a></dd>
+                    <dd><a href="#">UI设计</a></dd>
+                    <dd><a href="#">网站开发</a></dd>
+                    <dd><a href="#">视频制作</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="news.html">新闻中心</a></dt>
+                    <dd><a href="#">公司新闻</a></dd>
+                    <dd><a href="#">行业新闻</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="#">人才招聘</a></dt>
+                    <dd><a href="#">人才理念</a></dd>
+                    <dd><a href="#">招聘详情</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="contact_us.html">联系我们</a></dt>
+                    <dd><a href="contact_us.html">联系我们</a></dd>
+                </dl>
+            </div>
+            <div class="right">
+                <img class="er" src="images/foot-er.png" width="121" height="121" />
+                <img class="q" src="images/foot-q.png" width="34" height="36" />
+                <img class="b" src="images/foot-b.png" width="34" height="34" />
+                <img class="x" src="images/foot-x.png" width="33" height="33" />
+            </div>
+            <p><a href="#">版权所有 粤ICP备12023330号-1</a></p>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

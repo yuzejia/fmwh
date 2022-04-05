@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>联系我们</title>
+<link type="text/css" rel="stylesheet" href="css/contact_us.css" />
+<link type="text/css" rel="stylesheet" href="css/css.css" />
+</head>
+
+<body>
+<div class="top">
+          <a href="index.html"><img src="images/logo.png" width="293" height="146" /></a>
+         <ul class="nav">
+          <li><a href="index.html">首页</a></li>
+          <li><a href="about_us.html">公司介绍</a></li>
+          <li><a href="news.html">新闻中心</a></li>
+          <li><a href="product.html">产品中心</a></li>
+          <li><a class="current" href="contact_us.html">联系我们</a></li>
+   </ul>
+</div>
+      <div class="banner"><img src="images/contact-banner.png" width="100%" height="430" />
+      </div>
+<div class="main">
+      <div class="top">  
+      <h4>联系我们 Contact</h4>
+      
+      </div>
+      
+      <div class="map">
+            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+<meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+<title>百度地图API自定义地图</title>
+<!--引用百度地图API-->
+<link type="text/css" rel="stylesheet" href="css/map.css" />
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+
+<body>
+  <!--百度地图容器-->
+  <div style="width:1120px;height:520px;border:#ccc solid 1px;" id="dituContent"></div>
+</body>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(113.353442,22.971738);//定义一个中心点坐标
+        map.centerAndZoom(point,16);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"我在这里",content:"汇峰装饰设计有限公司",point:"113.34905|22.974358",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("images/map.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+</html>     
+      
+      </div>
+      
+      
+      
+    
+  <div class="left">
+  <form>
+      <input class="box1" type="text" value="姓名："onfocus="if(this.value == '姓名：') this.value = ''" onblur="if(this.value =='') this.value = '姓名：'"/>
+      <input class="box2" type="text" value="邮箱："onfocus="if(this.value == '邮箱：') this.value = ''" onblur="if(this.value =='') this.value = '邮箱：'"/>
+      <textarea class="box3"onfocus="if(this.value == '我的留言：') this.value = ''" onblur="if(this.value =='') this.value = '我的留言：'">我的留言：</textarea>
+      <p>
+      <span> <a href="#"><img src="images/CAPTCHA.png" width="98" height="34" /></a> 
+      看不清？换一个</span>
+     <span> <input class="box5" type="text" value="验证码" onfocus="if(this.value == '验证码') this.value = ''" onblur="if(this.value =='') this.value = '验证码'" />
+      按左图填写</span>
+      </p>
+      <input class="box6" type="submit" value="提交"/><input class="box7" type="reset" value="重置"/>
+      </form> </div>
+  <ul class="right">
+    <li><img src="images/main1.png" width="18" height="30" /><span>郏县龙山大道新星苑7号楼</span></li>
+    <li><img src="images/main2.png" width="27" height="27" /><span>17839938392</span></li>
+    <li><img src="images/main3.png" width="27" height="30" /><span>王先生</span></li>
+    <li><img src="images/main4.png" width="18" height="31" /><span>1193042176</span></li>
+    <li><img src="images/main5.png" width="32" height="32" /><span>1193042176@qq.com</span></li>
+  </ul>
+      
+        </div>
+      
+      
+  </div>
+      
+      
+      
+      
+<div class="foot">
+       <div class="main">
+                            <div class="left">
+                                      <dl>
+                                           <dt><a href="about_us.html">关于我们</a></dt>
+                                           <dd><a href="#">品牌故事</a></dd>
+                                           <dd><a href="#">服务理念</a></dd>
+                                   </dl>
+                                   <dl>
+                                           <dt><a href="product.html">产品中心</a></dt>
+                                           <dd><a href="#">平面设计</a></dd>
+                                           <dd><a href="#">UI设计</a></dd>
+                                           <dd><a href="#">网站开发</a></dd>
+                                           <dd><a href="#">视频制作</a></dd>
+                                   </dl>
+                                   <dl>
+                                           <dt><a href="news.html">新闻中心</a></dt>
+                                           <dd><a href="#">公司新闻</a></dd>
+                                           <dd><a href="#">行业新闻</a></dd>
+                                   </dl>
+                                   <dl>
+                                           <dt><a href="#">人才招聘</a></dt>
+                                           <dd><a href="#">人才理念</a></dd>
+                                           <dd><a href="#">招聘详情</a></dd>
+                                   </dl>
+                                   <dl>
+                                           <dt><a href="contact_us.html">联系我们</a></dt>
+                                           <dd><a href="contact_us.html">联系我们</a></dd>
+                                   </dl>
+         </div>
+                                    <div class="right">
+                              <img class="er" src="images/foot-er.png" width="121" height="121" />
+                             <img class="q" src="images/foot-q.png" width="34" height="36" /> 
+                             <img class="b"src="images/foot-b.png" width="34" height="34" />
+                             <img class="x" src="images/foot-x.png" width="33" height="33" />
+         </div>
+                                           <p><a href="#">版权所有 粤ICP备12023330号-1</a></p>
+    </div>
+</div>
+ </div>                         
+</body>
+</html>

@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+html,body,div,ul,li,a,span,p,img,input,textarea,h1,h2,h3,h4,h5,h6,dl,dt,dd{ margin:0; padding:0; font-family:Arial, Helvetica, '微软雅黑';}
+ul{list-style:none;}
+a{ text-decoration:none;}
+img{ border:none;}
+input,textarea{ outline:none;}
+a{blr:expression(this.onFocus=this.blur()); border:none; color:#000;}
+/*blr没有特殊意思，
+expression 条件，这句话的意思是链接 a 在获得焦点的同时失去焦点。
+如果你用的是图片链接什么的，他不会显示周边的虚线。*/ 
+a:focus{ outline:none;}
+
+
+
+.top{ width:1163px; height:147px; margin:0 auto; font-family:"Microsoft YaHei"; font-size:18px; color:#000;}
+.top img{ width:300px; height:147px; float:left; line-height:147px;}
+.top .nav li{ width:150px; height:30px; text-align:center; line-height:190px; float:left;}
+.top .nav li .current{ color:#F00;}
+.top .nav li a:hover{ color:#F00;}
+.banner{ width:100%; height:430px;}
+
+h4.title{ font-family:"Microsoft YaHei"; width:856px; height:40px; text-align:center; line-height:40px; background:url(../images/index-main.png)2px -4px no-repeat; margin:0 auto;}
+h4.title a{ color:#FFF;}
+
+.foot{ width:100%; height:300px; background:#000; font-family:"Microsoft YaHei";}
+.foot .main{ width:1000px; height:250px; margin:0 auto; padding-top:50px;}
+.foot .main .left{ width:750px; height:200px; float:left;}
+.foot .main .left dl{ width:100px; height:200px; float:left; margin-left:50px;}
+.foot .main .left dl dd{ margin-top:8px;}
+.foot .main .left dl dd a{ font-size:14px; color:#666666;}
+.foot .main .left dl dd a:hover{ color:#F00;}
+.foot .main .left dl dt a{ font-size:18px; color:#FFF; }
+.foot .main .left dl dt a:hover{ color:#F00;}
+.foot .main .right{ width:150px; height:200px; float:right; margin-top:20px;}
+.foot .main .right span{ width:121px; height:121px; border:5px #FFF solid; display:block;}
+.foot .main p{ width:800px; height:21px; float:left; margin-left:50px;}
+.foot .main p a{ font-size:12px; color:#666666;}
+.foot .main p a:hover{ color:#F00;}

@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+
+  html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+	.BMap_Marker{ height:50px!important; background-position:-40px 60px!important; background:url(../images/map.png)  no-repeat !important;}

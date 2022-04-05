@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+.product .top p{ width:160px; height:20px; font-size:12px; padding-top:35px; float:right;}
+.product .main{ width:965px; overflow:hidden; margin-left:30px; margin-top:80px;}
+.product .main ul{ width:965px; font-size:14px; margin:15px 12px; float:left; }
+.product .main ul li{width:289px; height:279px; font-size:14px;float:left;border:1px #949ba3 solid; margin:15px 12px;}
+.product .main ul li h4{ line-height:30px; width:289px; text-align:center;font-weight:normal;}
+.product .main ul li p{ width:289px; height:35px;}
+.product .main ul li p a{ width:143px; height:35px; display:block; text-align:center; line-height:35px; float:left;}
+.product .main ul li p .center_a2{ float:right;}
+.product .main ul li:hover{ border:1px #FF0000 solid;}
+.product .main ul li:hover a{ color:#F00;}
+
+
+
+.product .page{ width:500px; height:50px; margin:0 auto; margin-top:80px; text-align:center; padding-left:60px;}
+.product .page a{ padding:5px 10px;margin:5px 10px; margin:0 auto; border radius:5px 10px; line-height:50px;}
+.product .page .page1{ border:1px #666666 solid; }
+.product .page .current{ border:1px #FF0000 solid; color:#F00;}
+.product .page a:hover{color:#F00;}
+.product .page .page1:hover{ border:1px #FF0000 solid;}

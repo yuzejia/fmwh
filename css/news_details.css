@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+.news .main-center{ width:1057px; float:right;}
+.news .main-center h2{ width:1052px; height:109px;font-weight:normal;}
+.news .main-center h2{ line-height:109px; text-align:center;}
+.news .main-center .news-top{ width:1000px; height:45px; font-size:12px; margin:0 auto; border-bottom:1px #666 dashed; border-top:1px #666666 dashed;}
+.news .main-center .news-top span{ float:left; line-height:45px; margin-left:50px;}
+.news .main-center .news-top p:last-child{ float:right; line-height:45px; margin-right:20px;}
+.news .main-center .news-top p:last-child a{ margin-right:15px;}
+.news .main-center .news-top p:last-child a:hover{ color:#F00;}
+.news .main-center .txt { width:750px; overflow:hidden; margin:0 auto; margin-top:50px;font-size:14px;}
+.news .main-center .txt p{ text-indent:2em; line-height:30px; margin-top:30px;}
+.news .main-center .txt img{ width:829px; height:401px;}
+.news .main-center .flip{width:1052px; height:157px;}
+.news .main-center .flip .prve{ float:left; line-height:157px;}
+.news .main-center .flip .next{ float:right; line-height:157px;}
+.news .main-center .flip a:hover{ color:#F00;}
+
+.news .top p{ width:200px; height:20px; font-size:12px; padding-top:35px; float:right;}

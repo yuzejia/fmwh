@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+
+.main{ width:1202px; overflow:hidden; margin:0 auto;font-family:"Microsoft YaHei"; margin-top:50px;}
+.main .top{ width:620px; height:49px; margin:0 auto; border-bottom:1px #999999 solid;}
+.main .top h4{ width:110px; text-align:center; margin:0 auto; border-bottom:2px #FF0000 solid; font-weight:normal;}
+.main .map{ width:1120px; overflow:hidden; margin:0 auto; padding-top:60px;}
+.main .left{ width:450px; overflow:hidden; float:left; font-size:14px; margin-left:80px;}
+.main .left .box1{ width:180px; height:30px; margin-top:60px; padding-left:8px;line-height:30px;}
+.main .left .box2{ width:320px; height:30px; margin:20px auto; padding-left:8px;line-height:30px;}
+.main .left .box3{ width:436px; height:204px; padding-left:8px; padding-top:8px; resize:none;}
+.main .left p{ width:305px; height:63px;  margin:25px 55px;}
+.main .left p span{ width:100px; height:63px; display:block; float:left; margin-left:45px;}
+.main .left p span a{ width:100px; height:34px; display:block; text-align:center;}
+.main .left p span .box5{ padding-left:8px;}
+.main .left p span input{ width:88px; height:30px;}
+
+
+
+
+.main .left .box6{ width:100px; height:35px; float:left;cursor:pointer;}
+.main .left .box6:hover{ background:#16abdc;}
+.main .left .box7{ width:100px; height:35px; float:right;cursor:pointer;}
+.main .left .box7:hover{ background:#16abdc;}
+.main .right{ width:600px; overflow:hidden; font-size:18px; float:right;}
+.main .right li{ width:380px; height:35px; margin:0 auto; margin-top:60px; line-height:35px;}
+.main .right li img{ float:left;}
+.main .right li span{ display:block; height:30px; float:left; margin-left:15px;}
+
+
+.foot{ margin-top:100px;}

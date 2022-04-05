@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+
+
+
+.about{ width:1202px; overflow:hidden; margin:0 auto;font-family:"Microsoft YaHei"; margin-top:30px;}
+.about .nav{ width:145px; overflow:hidden; float:left; }
+.about .nav h4 { width:145px; height:55px; background:#F00; font-weight:normal;}
+.about .nav h4 a{ display:block; width:145px; font-size:18px; text-align:center;}
+.about .nav h4 a{ color:#FFF; }
+.about .nav ul{ width:145px; overflow:hidden; background:#e7e2e2; font-size:12px; text-align:center; padding-top:20px; padding-bottom:30px;}
+.about .nav ul li{ width:100px; height:40px; margin:0 auto; line-height:40px;margin-top:15px; border:2px #FF0000 solid;}
+.about .nav ul li{width:100px; height:40px; background:#F00;}
+.about .nav ul li a{color:#FFF; display:block; width:100px; height:40px;}
+.about .nav ul li:hover{ background:#e7e2e2; border:2px #FF0000 solid;}
+.about .nav ul .current{ background:#e7e2e2; border:2px #FF0000 solid;}
+.about .nav ul .current a{ color:#F00;}
+.about .nav ul li:hover a{ color:#F00;}
+
+.about .top{ width:1057px; height:55px; float:right; border-bottom:1px #FF0000 solid;}
+.about .top p{ width:160px; height:20px; font-size:12px; margin-top:35px;float:right;}
+.about .top p .curren{ color:#F00;}
+.about .top p a:hover{ color:#F00;}
+.about .main{ width:755px; overflow:hidden; margin:0 auto; padding-top:80px;}
+.about .main img{ margin-left:30px; margin-bottom:30px;}
+.about .main p{ text-indent:2em; font-size:14px; color:#7a7a7a; line-height:25px; margin-top:30px; }
+
+
+.foot{ margin-top:100px;}
+
+
+
